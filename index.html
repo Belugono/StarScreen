@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>StarScreen</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StarScreen — Передача экрана</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; background: #111; color: #eee; text-align: center; }
+  video { max-width: 90vw; max-height: 70vh; background: black; border-radius: 10px; }
+  #link { margin: 20px 0; }
+  button { padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 6px; border: none; background: #2e89ff; color: white; }
+  button:hover { background: #1a5ec8; }
+</style>
 </head>
 <body>
-  <h1>🎥 StarScreen (PeerJS)</h1>
 
-  <p>
-    Твой ID: <span id="my-id">...</span>
-  </p>
-  <p>
-    <input type="text" id="remote-id" placeholder="ID другого пользователя">
-    <button id="connect">Подключиться</button>
-  </p>
+<h1>StarScreen</h1>
+<p>Поделись ссылкой с другом для подключения:</p>
+<div id="link"></div>
 
-  <button id="share">📤 Поделиться экраном</button>
-  <button id="fullscreen">🔳 На весь экран</button>
+<button id="shareBtn">Поделиться экраном</button>
+<button id="fullscreenBtn">Полноэкранный режим</button>
 
-  <video id="video" autoplay playsinline></video>
+<video id="video" autoplay playsinline></video>
 
-  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.4.7/dist/peerjs.min.js"></script>
-  <script src="script.js"></script>
+<script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
