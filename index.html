@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>StarScreen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎥 StarScreen (PeerJS)</h1>
+
+  <p>
+    Твой ID: <span id="my-id">...</span>
+  </p>
+  <p>
+    <input type="text" id="remote-id" placeholder="ID другого пользователя">
+    <button id="connect">Подключиться</button>
+  </p>
+
+  <button id="share">📤 Поделиться экраном</button>
+  <button id="fullscreen">🔳 На весь экран</button>
+
+  <video id="video" autoplay playsinline></video>
+
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.4.7/dist/peerjs.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
